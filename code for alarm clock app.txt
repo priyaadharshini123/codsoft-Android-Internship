@@ -1,0 +1,116 @@
+ index.hml
+<!doctype  html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Creative alarms</title>
+        <link rel="stylesheet" href="main.css">
+        <style>
+            body{
+                background-color:blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="alarm-clock">
+            <div class="clcok-face">
+                <div class="hour-hand"></div>
+                <div class="minute-hand"></div>
+                <div class="second-hand"></div>
+                <div class="alarm-indicator"></div>
+
+                </div>
+           <div class="alarm-controls">
+            <input type="time" id="alarm-time" class="alarm-time">
+            <button onclick="setAlarm()" class="set-alarm-button"> Set Alarm</button>
+            </div>
+            </div>
+            <script src="script.js"></script>
+    </body>
+</html>
+-----------------------------------------------------------------------------------------------------------------------------------------------
+     main.css
+body{
+    display: flex;
+    justify-content:centre;
+    align-items:centre;
+    height:100vh;
+    margin:0;
+    background-color:#f0f0f0;
+    
+}
+.alarm-clock{
+    position:relative;
+    width:300px;
+    height:300px;
+    background-color:#fff;
+    border-radius:50%;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    display:flex;
+    flex-direction:column;
+    align-items:centre;
+}
+.clock-face{
+    position:relative;
+    width:80%;
+    height:80%;
+    margin-top:10%;
+    background-color:#f0f0f0;
+    border-radius:50%;
+    display:flex;
+    justify-content:centre;
+    align-items:centre;
+}
+.hour-hand, .minute-hand, .second-hand{
+    position:absolute;
+    background-color:#333;
+    transform-orgin:50% 100%;
+}
+.hour-hand{
+    width:8px;
+    height:40px;
+}
+.minute-hand{
+    width:6px;
+    height:55px;
+}
+.second-hand{
+    width:2px;
+    height:60px;
+    background-color:red;
+
+}
+.alarm-indicator{
+    position:absolute;
+    width:8px;
+    height:8px;
+    background-color:red;
+    border-radius:50%;
+    bottom:50%;
+    transform:translateY(50%);
+}
+.alarm-controls{
+    margin-top:20px;
+    display:flex;
+    flex-direction:column;
+    align-items:centre;
+}
+.alarm-time{
+    margin-bottom: 10px;
+    padding:5px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+.set-alarm-button{
+    padding:8px 16px;
+    background-color:#3498db;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    transition:background-color 0.3s;
+}
+.set-alarm-button:hover{
+    background-color:#2980b9;
+}
