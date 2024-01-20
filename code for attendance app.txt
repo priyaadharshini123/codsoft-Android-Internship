@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale">
+        <title>University Attendance App</title>
+        <style>
+            body{
+                font-family:arial,sans-sarif;
+                margin:20px;
+            }
+            form{
+                max-width:400px;
+                margin:auto;
+            }
+            label{
+                display:100px;
+                padding:8px;
+                margin-bottom:12px;
+                box-sizing:border-box;
+            }
+            button{
+                background: color #aa4c7b;
+                color:#4caa50white;
+                padding:10px 15px;
+                border:none;
+                border-radius:4px;
+                cursor:pointer;
+            }
+            button:hover{
+                backgoround-color:#45a049;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>University Attendance App</h2>
+        <form>
+            <label for="StudenId" Student Id:</label>
+            <input type="text"id="StudentId" name="StudentId" required>
+            <label for="COurseCode">CourseCode:</label>
+            <input type="Text" id="course code" name="course code" required>
+            <button type="button" onclick="MarkAttendance()">Mark Attendance</button>
+        </form>
+    <script>
+    function MarkAttendance(){
+        alert("Attendance marked successfully");
+    }
+    
+    </script>
+       
+    </body>
+</html>
